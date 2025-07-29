@@ -1,0 +1,367 @@
+.mtop {
+    margin-top:240px;
+}
+ .form-control {
+    color:#fff !important;
+    font-weight:bold !important;
+     background:none !important;
+     border-top:none;
+     border-left:none;
+     border-right:none;
+     border-bottom:1px solid #fff;
+     border-radius:0px !important;
+     height: 40px !important;
+}
+ .input-group-text {
+    padding:0px !important;
+     border-bottom: 1px solid #fff !important;
+     background:none !important;
+     border-right:none !important;
+     border-left:none !important;
+     border-top:none !important;
+     border-radius:0px !important;
+}
+ ::placeholder {
+     color: #e9eff5 !important;
+     opacity: 0.3;
+     font-weight:normal;
+}
+ :-ms-input-placeholder {
+     color: #e9eff5 !important;
+     font-weight:normal;
+}
+ ::-ms-input-placeholder {
+     color: #e9eff5 !important;
+     font-weight:normal;
+}
+ .form-control:focus{
+     box-shadow: none;
+     border-bottom:1px solid #fff;
+}
+.login_margin{
+    margin-top:3rem;
+    padding-top:3rem;
+}
+.logomargin{
+	margin-bottom:3rem;
+}
+
+.bg-info1 {
+    background-color: #2c3e50 !important;
+}
+
+#about{
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    color: black;
+    font-size: 12px;
+    padding: 5px;
+}
+
+#forgotpassword{
+     height: auto;
+     border-radius: 8px;
+     width: 80%;
+     border: 2px solid #fff;
+     transform: translate(-50%, -50%);
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     color:#fff;
+     overflow-y: auto;
+     transition: 0.5s;
+     z-index: 99998;
+     display:none;
+     background: linear-gradient(135deg, #2156aa 31%,#4ecbfb 71%,#c0f2fc 79%,#dfdacd 87%,#dfdacd 92%,#d1cebb 97%);
+}
+
+#forgotmask{
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:99997;
+    display:none;
+    background:rgba(255,255,255,0.5);
+}
+
+ #forgotpassword ul li input{
+     margin-right: 10px;
+     padding:0px;
+}
+
+#fusername::-webkit-input-placeholder {
+    color: #909;
+}
+#fusername:-moz-placeholder {
+    color: #909;
+    opacity: 1;
+}
+#fusername::-moz-placeholder {
+    color: #909;
+    opacity: 1;
+}
+#fusername:-ms-input-placeholder {
+    color: #909;
+}
+
+.list-group-item {
+    padding: 0.25rem .50rem;
+}
+.card-body {
+    color: #777;
+    font-size: 13px;
+}
+
+.route_body {
+    padding: 0px !important;
+}
+.login_fontsize{
+	font-size:14px;
+}
+@media only screen and (min-height:320px) and (max-height: 480px) {
+	 .log {
+	 	top:15px !important;
+	 	width:200px !important;
+	 }
+	 .login_margin{
+	 	margin-top: 0rem;
+    	padding-top: 0rem;
+	 }
+	.logomargin{
+	margin-bottom:1rem;
+	}
+}
+@media only screen and (min-width:320px) and (max-width: 480px) {
+     .bgs {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2156aa+31,4ecbfb+71,c0f2fc+79,dfdacd+87,dfdacd+92,d1cebb+97 */
+         background: #2156aa;
+        /* Old browsers */
+         background: -moz-linear-gradient(-45deg, #2156aa 31%, #4ecbfb 71%, #c0f2fc 79%, #dfdacd 87%, #dfdacd 92%, #d1cebb 97%);
+        /* FF3.6-15 */
+         background: -webkit-linear-gradient(-45deg, #2156aa 31%,#4ecbfb 71%,#c0f2fc 79%,#dfdacd 87%,#dfdacd 92%,#d1cebb 97%);
+        /* Chrome10-25,Safari5.1-6 */
+         background: linear-gradient(135deg, #2156aa 31%,#4ecbfb 71%,#c0f2fc 79%,#dfdacd 87%,#dfdacd 92%,#d1cebb 97%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2156aa', endColorstr='#d1cebb',GradientType=1 );
+        /* IE6-9 fallback on horizontal gradient */
+
+    }
+     .pads {
+        padding-left:0px !important;
+         padding-right:0px !important;
+    }
+     .pads2 {
+        margin-left:0px !important;
+         margin-right:0px !important;
+    }
+     .log {
+        background:url("../images/Naavic_logo.svg") no-repeat;
+         width:240px;
+         height:79px;
+         position:relative;
+         top:70px;
+         background-size: 100%;
+    }
+     .ptop {
+        padding-top:15px;
+    }
+    .route_body>ul {
+        font-size: 18px;
+    }
+}
+ @media only screen and (min-width:481px) and (max-width:1366px){
+     .bgs {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2156aa+31,4ecbfb+71,c0f2fc+79,dfdacd+87,dfdacd+92,d1cebb+97 */
+         background: #2156aa;
+        /* Old browsers */
+         background: -moz-linear-gradient(-45deg, #2156aa 31%, #4ecbfb 71%, #c0f2fc 79%, #dfdacd 87%, #dfdacd 92%, #d1cebb 97%);
+        /* FF3.6-15 */
+         background: -webkit-linear-gradient(-45deg, #2156aa 31%,#4ecbfb 71%,#c0f2fc 79%,#dfdacd 87%,#dfdacd 92%,#d1cebb 97%);
+        /* Chrome10-25,Safari5.1-6 */
+         background: linear-gradient(135deg, #2156aa 31%,#4ecbfb 71%,#c0f2fc 79%,#dfdacd 87%,#dfdacd 92%,#d1cebb 97%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2156aa', endColorstr='#d1cebb',GradientType=1 );
+        /* IE6-9 fallback on horizontal gradient */
+
+    }
+     .log {
+        background:url("../images/Naavic_logo.svg") no-repeat;
+         width:320px;
+         height:150px;
+         position:relative;
+         top:30px;
+             background-size: 100%;
+    }
+     .form-control {
+        font-size:1.3rem !important;
+    }
+     .btn-primary {
+        font-size:20px;
+         font-weight:bold;
+    }
+     .pads {
+        padding-left:0px !important;
+         padding-right:0px !important;
+    }
+     .pads2 {
+        margin-left:0px !important;
+         margin-right:0px !important;
+    }
+     .ptop {
+        padding-top:30px;
+    }
+     .logforgets {
+        font-size:20px !important;
+    }
+    .route-header>h5 {
+        font-size: 1.25rem;
+    }
+    .route-header {
+        padding: 0.25rem 1.25rem !important;
+    }
+    .route-footer {
+        padding: 0.25rem 1.25rem !important;
+    }
+    .login_fontsize{
+	font-size:20px;
+}
+}
+ @media only screen and (min-device-width : 1200px) and (max-device-width : 1600px) and (orientation : landscape) {
+     .bgs {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2156aa+31,4ecbfb+71,c0f2fc+79,dfdacd+87,dfdacd+92,d1cebb+97 */
+         background: #2156aa;
+        /* Old browsers */
+         background: -moz-linear-gradient(-45deg, #2156aa 31%, #4ecbfb 71%, #c0f2fc 79%, #dfdacd 87%, #dfdacd 92%, #d1cebb 97%);
+        /* FF3.6-15 */
+         background: -webkit-linear-gradient(-45deg, #2156aa 31%,#4ecbfb 71%,#c0f2fc 79%,#dfdacd 87%,#dfdacd 92%,#d1cebb 97%);
+        /* Chrome10-25,Safari5.1-6 */
+         background: linear-gradient(135deg, #2156aa 31%,#4ecbfb 71%,#c0f2fc 79%,#dfdacd 87%,#dfdacd 92%,#d1cebb 97%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2156aa', endColorstr='#d1cebb',GradientType=1 );
+        /* IE6-9 fallback on horizontal gradient */
+         height:100vh;
+         padding:0px;
+         margin:0px;
+    }
+     .pads {
+        padding-left:0px !important;
+         padding-right:0px !important;
+    }
+     .pads2 {
+        margin-left:0px !important;
+         margin-right:0px !important;
+    }
+     .form-control {
+        font-size:1.3rem !important;
+    }
+     .btn-primary {
+        font-size:20px;
+         font-weight:bold;
+    }
+     .log {
+        background:url("../images/Naavic_logo.svg") no-repeat;
+         width:320px;
+         height:150px;
+         position:relative;
+         top:30px;
+         background-size: 100%;
+    }
+     input {
+        font-size:20px;
+         color:yellow;
+    }
+     .ptop {
+        padding-top:30px;
+    }
+     .logforgets {
+        font-size:20px !important;
+    }
+     .map {
+        width:100% !important;
+         margin:0px;
+         padding:0px;
+    }
+    .login_margin{
+		margin-top:0rem;
+		padding-top:0rem;
+	}
+	.login_fontsize{
+	font-size:20px;
+}
+}
+ @media only screen and (min-device-width:768px) and (max-device-width:992px) {
+    
+     .fa, .fas {
+         font-size:30px;
+    }
+   
+    .login_margin{
+		margin-top:0rem;
+		padding-top:0rem;
+	}
+}
+@media only screen and (min-device-width : 1200px) and (max-device-width : 1600px) and (orientation : landscape) {
+    .fa, .fas {
+         font-size:30px;
+    }
+}
+
+.popup1 {
+    width:100%;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup1 .popuptext {
+  visibility: hidden;
+  width: 100%;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 70%;
+
+}
+
+/* Popup arrow */
+.popup1 .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 7%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup1 .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}

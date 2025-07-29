@@ -1,0 +1,178 @@
+.card_inline{
+     display:inline-block;
+     padding:2px;
+     position:relative;
+     width:100%;
+}
+ .likesfont{
+     font-size:18px;
+}
+ .objselectimg{
+     background-color: #fff;
+     border-color:#6374d6 !important;
+     position:relative;
+     border-radius:4px;
+}
+ #imgget_activity{
+     width:31px;
+     height:31px;
+     padding-right:5px;
+     margin-right:3px;
+     border-right:1px solid #eee;
+}
+ .dropsymbol{
+     position:absolute;
+     right:2px;
+     top:2px;
+     z-index:1;
+     border:none;
+}
+ .mydropwidth{
+     width:auto;
+     height:auto;
+}
+ .listoficons >ul >li{
+     color: #2ab8ce;
+     padding: 5px;
+     text-decoration: none;
+     display: inline-block;
+     background-color: #fff !important;
+     text-align:center;
+     border-radius: 4px;
+     border:1px solid #ccc;
+     display:block;
+}
+ .selecteddropimg{
+     width:36px;
+}
+ .paperclipbtn{
+     background-color:transparent;
+     border-color:#6374d6 !important;
+     color:#fff;
+     font-weight:300;
+}
+ .droptagwidth{
+     min-width:75px;
+     width:auto;
+     height:auto;
+}
+ .objattachtagwidth{
+     padding:0px;
+     width:auto;
+     height:auto;
+     font-size:30px;
+     color:#00adef;
+     background-color:#fff;
+     border:1px solid #00adef;
+}
+ .likestext{
+     font-size:10px;
+}
+ .infoobjspan{
+     margin:0;
+     padding:0;
+     list-style:none;
+     position:absolute;
+     right:0px;
+     font-size:18px;
+     z-index:999;
+     top:0px;
+}
+ .infoobjspan>li{
+     float:left;
+     text-align:center;
+}
+
+ .objinfoparagraph{
+     font-size:13px;
+     white-space:normal !important;
+     font-weight:normal !important;
+     border-top-left-radius:0px !important;
+     border-top-right-radius:0px !important;
+}
+ .objroudimgpost{
+     width:16px !important;
+     height:16px !important;
+     float:left;
+}
+ .postedby{
+     position:relative;
+     left:5px;
+     font-size:11px;
+     font-weight:500;
+     font-style:italic;
+     color:#777;
+}
+ #postedbyimage{
+     width:16px;
+     height:16px;
+}
+ .objindatentime{
+     position:relative;
+     top:3px;
+}
+#selectedimagefilenametag{
+        overflow: hidden;
+        text-overflow: ellipsis;
+}
+
+
+ @media only screen and (min-device-width : 320px) and (max-device-width : 767px){
+     .iconfontforfilechoose{
+         font-size:28px;
+    }
+}
+ @media only screen and (min-device-width : 768px) and (max-device-width : 1290px) and (orientation : landscape) {
+     .likesfont{
+         font-size:24px;
+    }
+     #imgget_activity{
+         width:41px;
+         height:41px;
+         padding-right:5px;
+         margin-right:3px;
+         border-right:1px solid #eee;
+    }
+     .dropsymbol{
+         position:absolute;
+         right:2px;
+         top:10px;
+         z-index:1;
+         border:none;
+    }
+     .likestext{
+         font-size:14px;
+    }
+     .infoobjspan{
+         font-size:18px;
+    }
+     .objinfoparagraph{
+         font-size:16px;
+    }
+     .linkfont{
+         font-size:14px;
+    }
+}
+ @media only screen and (min-device-width : 768px) and (max-device-width : 1290px) {
+     .iconfontforfilechoose{
+         font-size:40px;
+    }
+     .objinfoparagraph{
+         font-size:18px;
+    }
+     .linkfont{
+         font-size:14px;
+    }
+     .objroudimgpost{
+         width:24px;
+         height:24px;
+    }
+     .postedby{
+         font-size:16px;
+         left:15px;
+    }
+     #postedbyimage{
+         width:24px;
+         height:24px;
+    }
+}

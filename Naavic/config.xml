@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.iic.naavic" version="3.0.6"  android-versionCode="39" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+     
+    <name>NaAVIC</name>
+    <description>Sample Apache Cordova App</description>
+    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
+        Apache Cordova Team
+    </author>
+    <content src="map.html" />
+
+      <access origin="*" />
+    
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+
+    <!-- <preference name="MixedContentMode" value="compatibility" /> -->
+    <platform name="android">
+    <preference name="AndroidInsecureFileModeEnabled" value="true" />
+    <icon src="res/icon/android/icon-36-ldpi.png" density="ldpi" />
+    <icon src="res/icon/android/icon-48-mdpi.png" density="mdpi" />
+    <icon src="res/icon/android/icon-72-hdpi.png" density="hdpi" />
+    <icon src="res/icon/android/icon-96-xhdpi.png" density="xhdpi" />
+    <icon src="res/icon/android/icon-144-xxhdpi.png" density="xxhdpi" />
+    <icon src="res/icon/android/icon-192-xxxhdpi.png" density="xxxhdpi" />
+
+<preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/screen/android/splashscreen.xml" />
+<preference name="AndroidWindowSplashScreenAnimationDuration" value="300"/>
+<preference name="AndroidWindowSplashScreenIconBackgroundColor" value="#ffffff" />
+<preference name="AutoHideSplashScreen" value="true"/>
+<preference name="SplashScreenDelay" value="1000"/> 
+ <preference name="LoadUrlTimeoutValue" value="50000"/>  
+    <!-- <preference name="AndroidWindowSplashScreenAnimatedIcon" value="" />
+   <preference name="AndroidWindowSplashScreenAnimationDuration" value="100"/>
+   <preference name="LoadUrlTimeoutValue" value="20000"/>  -->
+</platform>
+
+   
+    
+</widget>

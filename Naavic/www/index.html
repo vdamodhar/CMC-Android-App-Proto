@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1, initial-scale=1">
+
+    <link rel="icon" href="images/IIC_fav.PNG" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mqueries.css">
+    <link rel="stylesheet" href="css/jquery.alerts.css" type="text/css">
+    <link rel="stylesheet" href="css/loader.css" type="text/css">
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/urls.js"></script>
+    <script src="js/jquery.alerts.js"></script>
+    <script src="js/index.js"></script>
+    <title>::Naavic::</title>
+    <script type="text/javascript">
+     function mappageload() {
+        setTimeout(function(){
+            document.getElementById('pageload').style.display = 'none';
+        }, 2000);
+
+
+     }
+    </script>
+</head>
+<body onload="mappageload()">
+<div class="container-fluid pads">
+    <div class="bgs" style="position:relative;">
+        <div class="mx-auto text-center mb-5 log">&nbsp;</div>
+        <div class="row pads2 login_margin">
+            <div class="col-2 col-sm-2 col-md-3 col-lg-4">&nbsp;</div>
+            <div class="col-8 col-sm-8 col-md-6 col-lg-4">
+                <div class="form-group">
+                    <label class="sr-only ptop" >Username</label>
+                    <div class="input-group mb-4 mr-sm-2 ptop">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><img src="images/user.png"></div>
+                        </div>
+                        <input type="text" class="form-control" id="UserName" placeholder="Username" value="">
+                    </div>
+                    <div class="input-group mb-4 mr-sm-2 ptop">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><img src="images/lock.png"></div>
+                        </div>
+                        <input type="password" class="form-control" id="Password" placeholder="Password" value="">
+                    </div>
+                </div>
+                <button type="submit" onclick="CheckCredentials()" class="btn btn-primary d-block mx-auto btn-block mt-5 waves-effect" id="login">Login</button>
+                <div class="mt-4 font-weight-bold clearfix">
+                    <p class="logforgets float-left"><a href="signup.html" class="text-white login_fontsize">Sign Up</a>
+                    <p class="logforgets float-right"><a onclick="showresetpopup()" class="text-white login_fontsize">Forgot Password?</a>
+                </div>
+            </div>
+            <div class="col-2 col-sm-2 col-md-3 col-lg-4">&nbsp;</div>
+        </div>
+        <div id="about">Copyright &copy; 2023 <b>NaAVIC&trade;</b> 3.0.1 <br>Powered by <b>Nautilus Cloud</b> and Designed by <b>IIC Technologies</b></div>
+    </div>
+</div>
+<div class="load_page" id="pageload">
+    <div class="mt-5 mb-5 loader_inner">
+        <div class="loader"></div>
+        <div class="loader_img">
+            <img src="images/Naavic_loader.svg" class="loadimg_width">
+        </div>
+    </div>
+    <div class="loadtext">Loading..</div>
+</div>
+<div id="forgotmask"></div>
+
+<div id="forgotpassword">
+    <div class="card" style="background:transparent !important;">
+        <div class="card-header route-header">
+            <h5>Forgot Password</h5>
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item px-0" style="background:transparent !important; border:0 !important;"><input type="text" class="form-control text-white font-weight-bold" id="fusername" value="" placeholder="Enter Username"></li>
+            </ul>
+        </div>
+        <div class="card-footer route-footer font-weight-bold"><span class="float-left" onclick="closeForgotpopup()">CANCEL</span><span class="float-right" onclick="resetPassword()" id="forgotsubmit">SUBMIT</span></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,382 @@
+ .backto_main{
+     cursor: pointer;
+     float: left;
+     position: relative;
+     top: 4px;
+     font-size: 16px;
+}
+ .arrow_adjust{
+     position:relative;
+     top:19px !important;
+     left:0px;
+}
+ .btn-mycol{
+     background-color:#2c3e50;
+     color:#fff;
+}
+ .naavic-tabs .naavic-tab-item.show .naavic-tab-link, .naavic-tabs .naavic-tab-link.active{
+     border:0px !important;
+     border-top:0px !important;
+     border-left:0px !important;
+     border-right:0px !important;
+     background-color:transparent;
+     color:#fff !important;
+}
+ .naavic-tabs .naavic-tab-link:focus, .naavic-tabs .naavic-tab-link:hover{
+     border-top:0px !important;
+     border-left:0px !important;
+     border-right:0px !important;
+     color:#fff !important;
+}
+ .naavic-tabs .naavic-tab-link{
+     color:#fff;
+     font-size:11px;
+}
+ .naavic-tabs{
+     padding-bottom:3px !important;
+     border:0px !important
+}
+ li.naavic-tab-item.active {
+     border-bottom: 4px solid #fff !important;
+}
+ .setings_icontabs{
+     width:18px;
+     height:18px;
+     position:relative;
+     top:5px;
+}
+ .setti_roudedspan{
+     width:30px;
+     height:30px;
+     border-radius:50%;
+     background-color:#fff;
+     margin:0 auto;
+     display:block;
+}
+ .text-nvcolor{
+     color:#2c3e50 !important;
+}
+ .slider {
+     position: absolute;
+     cursor: pointer;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: #ccc;
+     -webkit-transition: .4s;
+     transition: .4s;
+}
+ .slider:before {
+     position: absolute;
+     content: "";
+     height: 18px;
+     width: 18px;
+     left: 4px;
+     bottom: 4px;
+     background-color: white;
+     -webkit-transition: .4s;
+     transition: .4s;
+}
+ input:checked + .slider {
+     background-color: #2c3e50 ;
+}
+ input:focus + .slider {
+     box-shadow: 0 0 1px #2196F3;
+}
+ input:checked + .slider:before {
+     -webkit-transform: translateX(26px);
+     -ms-transform: translateX(26px);
+     transform: translateX(26px);
+}
+/* Rounded sliders */
+ .slider.round {
+     border-radius: 34px;
+}
+ .slider.round:before {
+     border-radius: 50%;
+}
+ .profiletagwidth{
+     padding:0px;
+     width:auto;
+     height:auto;
+     font-size:30px;
+     color:#00adef;
+     background-color:#fff;
+     border:1px solid #00adef;
+}
+ .profilepiclist{
+     margin:0;
+     padding:0;
+     list-style:none;
+}
+ .profilepiclist >li{
+     float:left;
+     margin:0px 3px;
+     padding:0px 3px;
+}
+ .enableeditprofile{
+     position:fixed;
+     bottom:40px;
+     right:10px;
+     width:50px;
+     height:50px;
+     border-radius:50%;
+     background-color:#2c3350;
+     color:#fff;
+     font-size:24px;
+     text-align:center;
+     box-shadow:0 0.5rem 1rem rgba(0,0,0,0.20)!important;
+}
+ .editprofileimg{
+     width:80px;
+     height:80px;
+     border-radius:50%;
+     border:1px solid #eee;
+     margin:5px;
+     text-align:center;
+}
+ .enablecamera{
+     position:absolute;
+     bottom:0px;
+     width:40px;
+     height:40px;
+     border-radius:50%;
+     right:0px;
+     z-index:999;
+     background-color:#00adef;
+     color:#fff;
+     font-size:20px;
+}
+ .dropdown {
+     position: relative;
+     display: inline-block;
+}
+ .dropdown-content {
+     display: none;
+     position: absolute;
+    /* background-color: #00adee;
+     */
+     max-width: 300px;
+     overflow: auto;
+     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+     z-index: 99;
+     height:auto;
+     border-radius:4px;
+     padding: 1px;
+}
+ .dropdown-content span {
+     color: #2ab8ce;
+     padding: 5px;
+     text-decoration: none;
+     display: inline-block;
+     background-color: #fff !important;
+     text-align:center;
+     border-radius: 4px;
+     border:1px solid #ccc;
+     display:block;
+}
+ .dropdown>ul> li:hover {
+    border:1px solid #2c3e50;
+}
+ .show {
+    display: block;
+}
+ .naavicform{
+     border-bottom: 1px solid #bcddff !important;
+     border-left: 0;
+     border-radius: 0;
+     border-right: 0;
+     border-top: 0;
+}
+ .naavicform[readonly]{
+     background-color:#fff !important;
+}
+ .naavicform[placeholder]{
+     color: #00adef !important;
+     font-size: 16px !important;
+}
+ .form-group{
+     color:#2c3e50 !important;
+}
+#countrydisable:disabled{
+	--webkit-appearance: inherit;
+}
+ .naavicform::placeholder {
+     color: #00adef !important;
+     font-size: 13px !important;
+}
+ .naavicform:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+     color: #00adef !important;
+     font-size: 12px !important;
+}
+ .naavicform::-ms-input-placeholder {
+    /* Microsoft Edge */
+     color: #00adef !important;
+     font-size: 12px !important;
+}
+ .naavicform:focus{
+     box-shadow:none !important;
+}
+ .naavicform{
+     color:#00adef !important;
+}
+ .emoji_imgwidth{
+     width:35px;
+}
+ .emojiroundedbtn{
+     width:50px;
+     height:50px;
+     border-radius:50%;
+     border:1px solid #eee;
+     padding:8px;
+     margin:5px;
+     text-align:center;
+    float: left;
+}
+ .legend_bg-abbr{
+     color: #44433f;
+     background-color: #fbffe8;
+}
+ .pad_leftright{
+     padding-left:8px;
+     padding-right:8px;
+}
+
+	.customtable>tbody>tr>td{
+		padding: 5px 12px;
+		vertical-align:middle;
+		background-color:#fbffe8;
+		word-break: break-word;
+        border-color: #727f8c;
+	}
+	.customtable>thead>tr>th{
+	background-color:#b1d7ff;
+	}
+.customtable>tbody>tr>td:first-child{
+	width:125px;
+}
+.customtable>tbody>tr>td>img{
+	max-width: 100%;
+	height:auto;
+}
+.tabfontsize_accordionarrow{
+	font-size:18px;
+}
+ @media only screen and (min-device-width : 320px) and (max-device-width : 767px){
+     .nav-link{
+         padding: 0.5rem 2px 2px 2px !important;
+    }
+     .nav-tabs .nav-link{
+         border-bottom-width:0px !important
+    }
+     .navselect_height{
+         height:20px !important;
+         font-size:13px;
+    }
+     .profiletagwidth{
+         width:92px;
+    }
+     .iconfontforfilechoose{
+         font-size:28px;
+    }
+}
+/* TAB UI and Orientation in Landscape */
+ @media only screen and (min-device-width : 768px) and (max-device-width : 1290px) and (orientation : landscape) {
+     .backto_main{
+         font-size: 24px;
+         margin-right: 15px;
+    }
+    .table_widthtab{
+    	width:320px;
+    	margin:0 auto;
+    }
+    .btn-tabfor-sett{
+    	padding: 0.19rem .75rem;
+    }
+    .arrow_adjust{
+    	left:20px;
+    }
+    .customtable>tbody>tr>td:first-child{
+	width:450px;
+}
+}
+ @media only screen and (min-device-width : 768px) and (max-device-width : 1290px){
+ .tabfontsize_accordionarrow{
+	font-size:28px;
+}
+     .pad_leftright{
+         padding-left:15px;
+         padding-right:15px;
+    }
+     .profiletagwidth{
+         width:116px;
+    }
+     .iconfontforfilechoose{
+         font-size:40px;
+    }
+     .backto_main{
+         top:10px;
+    }
+     .arrow_adjust{
+         top:36px !important;
+    }
+     .nav-tabs .nav-link {
+         color: #fff;
+         font-size: 24px;
+    }
+     .setti_roudedspan{
+         width:55px;
+         height:55px;
+    }
+     .setings_icontabs{
+         width:32px;
+         height:32px;
+         top:7px;
+    }
+     .form_fontsize{
+         font-size:20px;
+    }
+     .form_fontsize select{
+         font-size:20px;
+    }
+     .editprofileimg{
+         width:100px;
+         height:100px;
+    }
+     .enableeditprofile{
+         width:70px;
+         height:70px;
+         font-size:34px;
+         right:25px;
+    }
+     .enablecamera{
+         width:45px;
+         height:45px;
+         font-size:24px;
+    }
+     .naavicform[placeholder]{
+         color: #00adef !important;
+         font-size: 20px !important;
+    }
+     .naavicform::placeholder {
+         font-size: 20px !important;
+    }
+     .naavicform:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+         font-size: 20px !important;
+    }
+     .naavicform::-ms-input-placeholder {
+        /* Microsoft Edge */
+         font-size: 20px !important;
+    }
+     .emoji_imgwidth{
+         width:40px;
+    }
+     .emojiroundedbtn{
+         width:60px;
+         height:60px;
+         padding:7px;
+    }
+}
