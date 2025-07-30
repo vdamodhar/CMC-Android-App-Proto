@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Offline</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1, initial-scale=1">
+	<link rel="icon" href="images/IIC_fav.PNG" type="image/png">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/offlinemap.css" type="text/css">
+	<link rel="stylesheet" href="css/fontawesome.min.css" type="text/css">
+	<link rel="stylesheet" href="css/solid.css" type="text/css">
+	<link rel="stylesheet" href="css/jquery.alerts.css" type="text/css">
+	<script src="js/jquery-3.6.4.min.js"></script>
+	<script src="cordova.js"></script>
+	<script src="js/jquery.alerts.js"></script>
+	<script src="js/ol-debug-v4.js"></script>
+	<script src="js/urls.js"></script>
+	<script src="js/offlineMap.js"></script>
+	<script src="js/offlineUI.js"></script>
+	<script src="js/colorpalette.js"></script>
+	
+</head>
+<body>
+<div class="" id="one">
+	<div class="card full_height">
+		<div class="card-header bg-change">
+			<a href="map.html" class="text-white"><i class="fas fa-arrow-left backto_mappage" style="top:0px;"></i></a>
+			<h6 class="ml-5 mt-0 mb-0 mr-0">Offline Maps</h6>
+		</div>
+		<div class="card-body p-0 m-0">
+			<div class="container-fluid">
+				<div class="row gotoofflinemap" style="border-bottom:1px solid #eee;" id="gotoofflinemap">
+					<div class="col-2 col-sm-1 text-center "><i class="fas fa-cloud-download-alt pt-3 officoncolor" style="font-size:24px;"></i></div>
+					<div class="col-10 col-sm-11 p-0">
+						<div class="px-0 my-3" style="font-size:16px;">Download Offline Chart Data</div>
+					</div>
+				</div>
+				<div class="row" style="border-bottom:1px solid #eee;">
+					<div class="col-12">
+						<p class="pt-2 pb-2 m-0 font-weight-bold">Downloaded Chart Data</p>
+					</div>
+				</div>
+				<div style="display:none;" id="downloadstatus">
+				<div class="row" style="border-bottom:1px solid #eee;">
+					<div class="col-2 col-sm-1 text-center"><i class="fas fa-spinner mt-4 p-1 fa-spin officoncolor" style="font-size:24px;"></i></div>
+					<div class="col-10 col-sm-11 p-0">
+						<div class="py-3">
+							<div class="" style="font-size:16px;">Chart Data One</div>
+							<span style="font-size:11px;" id='downloadingprogress'></span>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div style="border-bottom:1px solid #eee; display:none;" id='availablemap'>
+				<div class="row" >
+					<div class="col-2 col-sm-1 text-center"><i class="fas fa-check-circle mt-3 officoncolor" style="font-size:24px;"></i></div>
+					<div class="col-8 col-sm-10 p-0 gotolocationpage" onclick="showOfflineMap()">
+						<div class="py-3">
+							<div class="" style="font-size:16px;">Chart Data One</div>
+						</div>
+					</div>
+					<div class="col-2 col-sm-1 text-center" id="offlinemapdropdownbtn" style="position:relative;">
+						<i class="fas fa-trash officoncolor" style="font-size:16px; margin-top:20px;" onclick='deleteMap(1)'></i>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="" id="offlinemap" style="position:absolute; width:100%; height:100%; left:0; top:0;">
+	<div class="card text-white full_height" style="border:none;">
+		<div class="card-header bg-change text-center">
+			<h6 class="ml-5 mt-0 mb-0 mr-0">Download Chart Data of this Area?</h6>
+		</div>
+		<div class="card-body p-0 m-0">
+			<div id="map" class="map"></div>
+			<div id="padding-top"></div>
+			<div id="padding-left"></div>
+			<div id="padding-right"></div>
+			<div id="padding-bottom"></div>
+			<div id="top-left"></div>
+			<div id="top-right"></div>
+			<div id="bottom-left"></div>
+			<div id="bottom-right"></div>
+		</div>
+		<div class="card-footer bg-change">
+			<div class="row">
+				<div class="col-6 text-center">
+					<a class="text-white font-weight-bold" href="#" id="offlinemapclose">Close</a>
+				</div>
+				<div class="col-6 text-center">
+					<a class="text-white font-weight-bold" onclick="downLoadTiles()">Download</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
