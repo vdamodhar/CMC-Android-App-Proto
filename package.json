@@ -1,0 +1,61 @@
+{
+  "name": "com.iic.naavic",
+  "displayName": "Naavic",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@moodlehq/cordova-plugin-zip": "^3.1.0-moodle.1",
+    "cordova-android": "^14.0.1",
+    "cordova-plugin-advanced-http": "^3.3.1",
+    "cordova-plugin-camera": "^7.0.0",
+    "cordova-plugin-device": "github:apache/cordova-plugin-device",
+    "cordova-plugin-file": "^8.0.1",
+    "cordova-plugin-file-transfer": "^2.0.0",
+    "cordova-plugin-geolocation": "^5.0.0",
+    "cordova-plugin-inappbrowser": "^6.0.0",
+    "cordova-plugin-media-capture": "^5.0.0",
+    "cordova-plugin-network-information": "github:apache/cordova-plugin-network-information",
+    "cordova-plugin-screen-orientation": "^3.0.4",
+    "cordova-plugin-whitelist": "1",
+    "cordova-plugin-x-socialsharing": "^6.0.4",
+    "cordova-plugin-x-toast": "^2.7.3",
+    "cordova-plugin-zip": "^3.1.0",
+    "es6-promise-plugin": "^4.2.2",
+    "phonegap-plugin-mobile-accessibility": "github:phonegap/phonegap-mobile-accessibility",
+    "phonegap-plugin-speech-synthesis": "^0.1.1"
+  },
+  "cordova": {
+    "platforms": [],
+    "plugins": {
+      "phonegap-plugin-mobile-accessibility": {},
+      "cordova-plugin-camera": {
+        "ANDROIDX_CORE_VERSION": "1.6.+"
+      },
+      "cordova-plugin-file": {},
+      "cordova-plugin-file-transfer": {},
+      "cordova-plugin-geolocation": {
+        "GPS_REQUIRED": "true"
+      },
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-media-capture": {},
+      "cordova-plugin-screen-orientation": {},
+      "cordova-plugin-x-socialsharing": {},
+      "cordova-plugin-x-toast": {},
+      "phonegap-plugin-speech-synthesis": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-network-information": {},
+      "cordova-plugin-advanced-http": {},
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-zip": {}
+    }
+  }
+}
