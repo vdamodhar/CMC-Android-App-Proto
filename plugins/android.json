@@ -1,0 +1,66 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "@moodlehq/cordova-plugin-zip": {
+      "ANDROIDX_WEBKIT_VERSION": "1.4.0",
+      "PACKAGE_NAME": "com.iic.naavic"
+    },
+    "phonegap-plugin-mobile-accessibility": {
+      "PACKAGE_NAME": "com.iic.naavic"
+    },
+    "cordova-plugin-camera": {
+      "ANDROIDX_CORE_VERSION": "1.6.+",
+      "PACKAGE_NAME": "com.iic.naavic"
+    },
+    "cordova-plugin-file": {
+      "ANDROIDX_WEBKIT_VERSION": "1.4.0",
+      "PACKAGE_NAME": "com.iic.naavic"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.iic.naavic"
+    },
+    "cordova-plugin-geolocation": {
+      "GPS_REQUIRED": "true",
+      "PACKAGE_NAME": "com.iic.naavic"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.iic.naavic"
+    },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "com.iic.naavic"
+    },
+    "cordova-plugin-screen-orientation": {
+      "PACKAGE_NAME": "com.iic.naavic"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "com.iic.naavic"
+    },
+    "cordova-plugin-x-toast": {
+      "PACKAGE_NAME": "com.iic.naavic"
+    },
+    "phonegap-plugin-speech-synthesis": {
+      "PACKAGE_NAME": "com.iic.naavic"
+    },
+    "cordova-plugin-advanced-http": {
+      "ANDROIDBLACKLISTSECURESOCKETPROTOCOLS": "SSLv3,TLSv1",
+      "PACKAGE_NAME": "com.iic.naavic"
+    }
+  },
+  "dependent_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.iic.naavic"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.iic.naavic"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.iic.naavic"
+    }
+  }
+}
