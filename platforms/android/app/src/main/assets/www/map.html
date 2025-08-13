@@ -77,22 +77,22 @@
     <script src="js/locationAlert.js"></script>
     <script type="text/javascript"></script>
 
-    <script>
+<!--    <script>-->
 
-        function mappageload() {
-           
-            setTimeout(function () {
-                document.getElementById('pageload').style.display = 'block';
-                $(".loadtext").html("Preparing data..");
-                map.getView().setZoom(13);
-                map.getView().setCenter(ol.proj.transform(CurrentGPSPositionNotification, prj2, prj1));
-            }, 5000);
-              setTimeout(function(){ document.getElementById('pageload').style.display = 'none'; }, 10000);
-        }
+<!--        function mappageload() {-->
+<!--           -->
+<!--            setTimeout(function () {-->
+<!--                document.getElementById('pageload').style.display = 'block';-->
+<!--                $(".loadtext").html("Preparing data..");-->
+<!--                map.getView().setZoom(13);-->
+<!--                map.getView().setCenter(ol.proj.transform(CurrentGPSPositionNotification, prj2, prj1));-->
+<!--            }, 1000);-->
+<!--              setTimeout(function(){ document.getElementById('pageload').style.display = 'none'; }, 1000);-->
+<!--        }-->
 
-    
+<!--    -->
 
-    </script>
+<!--    </script>-->
 
     <style>
         .shadow-lg {
