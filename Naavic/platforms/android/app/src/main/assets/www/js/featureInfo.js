@@ -121,6 +121,7 @@ function displayPopUp(coordinate, popup, element) {
             tableData = "<table id='featuretable" + i + "' class='featuretableclass' style='display:none;'>";
         }
         for (var key in singleFeature) {
+            console.log(key + " " + singleFeature[key]);
             var bool = singleFeature[key] == "null" || singleFeature[key] == null || singleFeature[key] == "" || key == "RCID" || key == "PRIM" || key == "GRUP" || key == "OBJL" || key == "RVER" || key == "AGEN" || key == "FIDN" || key == "FIDS" || key == "LNAM" || key == "z1" || key == "z2" || key == "LNAM_REFS";
             if (key == "LayerName") {
                 tableData += '<tr style="background-color: #2c3e50; border-top-left-radius: 5px; position: fixed; width:73%;"><td valign="center"><b style="word-break: break-all; margin:0; font-size: 16px; padding:0; white-space: nowrap; color: #fff;">' + singleFeature[key] + '</b></td><td style="font-size: 16px; padding:2px;"></td></tr>';
