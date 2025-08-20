@@ -37,4 +37,7 @@ obj/
 .externalNativeBuild
 
 #Node Modules
-node_modules/
+node_modules
+coverage
+platforms
+plugins
