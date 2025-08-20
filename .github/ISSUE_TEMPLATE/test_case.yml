@@ -1,0 +1,94 @@
+name: 📝Test Case
+description: Use this template to document a new test case.
+title: 'TC-[Test Case ID]: [Test Case Title]'
+labels: 'test case, documentation'
+assignees:
+  - octocat
+
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Test Case Summary
+      description: A brief, high-level summary of the test case's purpose.
+    validations:
+      required: true
+
+  - type: input
+    id: module-feature
+    attributes:
+      label: Module/Feature
+      description: The specific application module or feature this test case is for (e.g., User Login, Checkout Process).
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How critical is this test case?
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: dropdown
+    id: test-type
+    attributes:
+      label: Test Type
+      description: What kind of testing is this?
+      options:
+        - Functional
+        - Regression
+        - - Integration
+        - Performance
+        - Usability
+        - Security
+    validations:
+      required: true
+
+  - type: textarea
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Conditions or setup needed before starting the test (e.g., user logged in, specific data exists).
+    validations:
+      required: false
+
+  - type: textarea
+    id: test-data
+    attributes:
+      label: Test Data
+      description: Any specific data required to execute the test.
+    validations:
+      required: false
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Test Steps
+      description: A numbered list of clear, actionable steps to perform.
+      placeholder: |
+        1. Step one.
+        2. Step two.
+        3. Step three.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-result
+    attributes:
+      label: Expected Result
+      description: The specific, verifiable outcome you expect to see.
+    validations:
+      required: true
+
+  - type: textarea
+    id: comments
+    attributes:
+      label: Comments/Notes
+      description: Any additional context, observations, or notes.
+    validations:
+      required: false

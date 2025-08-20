@@ -1,0 +1,79 @@
+name: "✨ New Feature"
+description: "Suggest a new feature or significant enhancement for the project."
+title: "[Feature]: "
+labels: "feature, enhancement"
+assignees:
+  - octact
+
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: A brief, high-level overview of the feature.
+    validations:
+      required: true
+
+  - type: input
+    id: user-story
+    attributes:
+      label: Linked User Story
+      description: Enter the ID or link to the user story associated with this feature.
+    validations:
+      required: false
+
+  - type: input
+    id: epic
+    attributes:
+      label: Linked Epic
+      description: Enter the ID or link to the epic this feature belongs to.
+    validations:
+      required: false
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem/Motivation
+      description: What problem does this feature solve? Why is it needed? Include any user stories or use cases.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      description: Describe the proposed solution and how it will be implemented. Be as detailed as possible.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What are the specific conditions that must be met for this feature to be considered complete?
+      placeholder: |
+        - [ ] The user can...
+        - [ ] The system handles...
+        - [ ] The feature is tested against...
+    validations:
+      required: true
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: Design & Mockups (Optional)
+      description: Add links to any design files, mockups, or wireframes.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How critical is this feature?
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
