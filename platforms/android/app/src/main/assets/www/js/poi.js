@@ -3,7 +3,7 @@ var pointFeatures = [], pointFeatures_new = [];
 var reviewsObject;
 var poiId;
 var Clusters_db, Clusters_new;
-/*$(function(){
+$(function(){
     updateDate();
     poiSource = new ol.source.Vector();
     $("#mosthelpreviews").css("height", $(window).height() - 120);
@@ -11,10 +11,7 @@ var Clusters_db, Clusters_new;
     if (window.Worker) {
         var inputs={'url': geoserverurl + 'ows?service=WFS&version=1.0.0&request=GetFeature&typeName=' + workspace + ':point_of_interest_view&outputFormat=application/json&srsname='+prj1};
         //var inputs={'url': geoserverurl + 'ows?service=WFS&version=1.0.0&request=GetFeature&typeName=' + workspace + ':poi_view_min&outputFormat=application/json&srsname='+prj1};
-
-        //var myWorker = new Worker("./js/poi_worker.js");
-
-
+        var myWorker = new Worker("./js/poi_worker.js");
         // Sending message as an array to the worker
         myWorker.postMessage(inputs);
         console.log('Message posted to worker');
@@ -43,10 +40,10 @@ var Clusters_db, Clusters_new;
                 location = ol.proj.transform([parseFloat(coordinates.longitude), parseFloat(coordinates.latitude)], ol.proj.get('EPSG:4326'), ol.proj.get('EPSG:900913'));
                 point_geom = new ol.geom.Point(location);
                 point_feature.setGeometry(point_geom);
-                *//*notes = "";
+                /*notes = "";
                 if(feature.hasOwnProperty('notes')){
                     notes = feature.notes[0].value;
-                }*//*
+                }*/
                     //point_feature.setProperties({'id':feature.id, 'name':feature.name, 'poiType' : feature.poiType,'notes' : notes , 'datelastmodified' : feature.dateLastModified });
                      point_feature.setProperties({'id':feature.id, 'poiType' : feature.poiType, 'datelastmodified' : feature.dateLastModified });
                      // point_feature.setProperties({'id':feature.id, 'poiType' : feature.poiType, 'datelastmodified' : feature.dateLastModified });
@@ -84,116 +81,7 @@ var Clusters_db, Clusters_new;
 /////// end of web worker //////////////////
     setTimeout(function(){ updatePOIdata() }, 15000);
     setInterval(function(){ updatePOIdata() }, 1000*60*15);
-});*/
-// replaced poi_worker.js file as it couldnot able to run in android app
-$(function () {
-    updateDate();
-    poiSource = new ol.source.Vector();
-    $("#mosthelpreviews").css("height", $(window).height() - 120);
-
-    ////// start the Blob-based Web Worker to avoid browser freezing and Android issues //////
-
-    if (window.Worker) {
-        const workerCode = `
-            onmessage = function(e) {
-                var obj = e.data;
-                var xhr = new XMLHttpRequest();
-
-                // Optional: Uncomment if GeoServer requires cookies/sessions
-                // xhr.withCredentials = true;
-
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState === 4) {
-                        postMessage(xhr.responseText);
-                    }
-                };
-
-                xhr.open("GET", obj.url, true);
-                xhr.setRequestHeader("Content-Type", "application/json");
-                xhr.send();
-            };
-        `;
-
-        const blob = new Blob([workerCode], { type: "application/javascript" });
-        const workerURL = window.URL.createObjectURL(blob);
-        const myWorker = new Worker(workerURL);
-
-        const inputs = {
-            url: geoserverurl + 'ows?service=WFS&version=1.0.0&request=GetFeature&typeName=' +
-                workspace + ':point_of_interest_view&outputFormat=application/json&srsname=' + prj1
-        };
-
-        myWorker.postMessage(inputs);
-        console.log("✅ Message posted to blob worker");
-
-        myWorker.onmessage = function (e) {
-            if (e.data == "") {
-                setTimeout(function () {
-                    document.getElementById('pageload').style.display = 'none';
-                }, 10000);
-            } else {
-                var response = JSON.parse(e.data);
-                if (response.features.length > 0) {
-                    pointFeatures = response.features;
-                    console.log("✅ pointFeatures.length  :: " + pointFeatures.length);
-
-                    var feature, coordinates, point_feature, location, point_geom, style;
-                    for (var i = 0; i < pointFeatures.length; i++) {
-                        feature = JSON.parse(pointFeatures[i].properties.poi);
-                        coordinates = feature.mapLocation;
-                        point_feature = new ol.Feature({});
-                        location = ol.proj.transform(
-                            [parseFloat(coordinates.longitude), parseFloat(coordinates.latitude)],
-                            ol.proj.get('EPSG:4326'), ol.proj.get('EPSG:900913')
-                        );
-                        point_geom = new ol.geom.Point(location);
-                        point_feature.setGeometry(point_geom);
-
-                        point_feature.setProperties({
-                            id: feature.id,
-                            poiType: feature.poiType,
-                            datelastmodified: feature.dateLastModified
-                        });
-
-                        style = new ol.style.Style({
-                            image: new ol.style.Icon({
-                                src: 'images/activecaptain/activecaptain_flag_know_' + feature.poiType.toLowerCase() + '.png',
-                                size: [36, 36],
-                                scale: 1
-                            })
-                        });
-
-                        point_feature.setStyle(style);
-                        poiSource.addFeature(point_feature);
-                    }
-
-                    Clusters_db = new ol.layer.Vector({
-                        source: poiSource,
-                        title: 'Point Of Interest',
-                        minResolution: 0.298,
-                        maxResolution: 152.746,
-                        declutter: true
-                    });
-
-                    map.addLayer(Clusters_db);
-                    console.log("✅ Clusters_db layer added to map");
-
-                    layerSwitcher.renderPanel();
-
-                    setTimeout(function () {
-                        document.getElementById('pageload').style.display = 'none';
-                    }, 5000);
-                }
-            }
-        };
-    }
-
-    ////// end of web worker //////
-
-    setTimeout(function () { updatePOIdata(); }, 15000);
-    setInterval(function () { updatePOIdata(); }, 1000 * 60 * 15);
 });
-
 
 function updatePOIdata(){
 

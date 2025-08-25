@@ -234,7 +234,7 @@ function gotTrackFileCreate(fileEntry) {
         fileWriter.onwriteend = function(e) {
             jAlert("Successfully saved Track", "Tracking");
             closeTrackFileName();
-            window.resolveLocalFileSystemURL('cdvfile://localhost/persistent/Android/data/com.iict.naavic/NaAVIC/Tracks/'+trackFileName,  onTrackSuccess , fail);
+            window.resolveLocalFileSystemURL('cdvfile://localhost/persistent/Android/data/com.iic.naavic/NaAVIC/Tracks/'+trackFileName,  onTrackSuccess , fail);
             clearInterval(trackingIntervalLoop);
             navigator.geolocation.clearWatch(watchPositionGPS);
             $("#trackingstatus").css('display','none');
