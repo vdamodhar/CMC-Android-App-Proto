@@ -64,458 +64,530 @@ $(document).ready(function() {
             maxZoom:19
         });
 
-        vectorTileUrlPrefix = geoserverurl + 'gwc/service/wmts?layer=';
-        vectorTileUrlSuffix = '&tilematrixset='+prj3+'&Service=WMTS&Request=GetTile&Version=1.0.0&Format=application/x-protobuf;type=mapbox-vector&TileMatrix='+prj3+':{z}&TileCol={x}&TileRow={y}';
+       
 
-        GroupUsage1 = new ol.layer.VectorTile({
-            type : 'wmts',
-            preload: 0,
-            renderMode: 'image',
-            minResolution : 610.984,
-            maxResolution : 2444,
-            style : set_genericStyle,
-            crossOrigin : 'anonymous',
-            source : new ol.source.VectorTile({
-                tileGrid:ol.tilegrid.createXYZ(),
-                format : new ol.format.MVT(),
-                url : vectorTileUrlPrefix + workspace +':vt_group1' + vectorTileUrlSuffix
-            })
-        });
+        // vectorTileUrlPrefix = geoserverurl + 'gwc/service/wmts?layer=';
+        // vectorTileUrlSuffix = '&tilematrixset='+prj3+'&Service=WMTS&Request=GetTile&Version=1.0.0&Format=application/x-protobuf;type=mapbox-vector&TileMatrix='+prj3+':{z}&TileCol={x}&TileRow={y}';
 
-        GroupUsage2 = new ol.layer.VectorTile({
-            type : 'wmts',
-            preload: 0,
-            renderMode: 'image',
-            minResolution : 152.746,
-            maxResolution : 610.984,
-            style : set_genericStyle,
-            crossOrigin: 'anonymous',
-            source : new ol.source.VectorTile({
-                tileGrid:ol.tilegrid.createXYZ(),
-                format : new ol.format.MVT(),
-                url : vectorTileUrlPrefix + workspace +':vt_group2' + vectorTileUrlSuffix
-            })
-        });
+        // GroupUsage1 = new ol.layer.VectorTile({
+        //     type : 'wmts',
+        //     preload: 0,
+        //     renderMode: 'image',
+        //     minResolution : 610.984,
+        //     maxResolution : 2444,
+        //     style : set_genericStyle,
+        //     crossOrigin : 'anonymous',
+        //     source : new ol.source.VectorTile({
+        //         tileGrid:ol.tilegrid.createXYZ(),
+        //         format : new ol.format.MVT(),
+        //         url : vectorTileUrlPrefix + workspace +':vt_group1' + vectorTileUrlSuffix
+        //     })
+        // });
 
-        GroupUsage3 = new ol.layer.VectorTile({
-            type : 'wmts',
-            preload: 0,
-            renderMode: 'image',
-            minResolution : 19.093,
-            maxResolution : 152.746,
-            style : set_genericStyle,
-            crossOrigin : 'anonymous',
-            source : new ol.source.VectorTile({
-               tileGrid:ol.tilegrid.createXYZ(),
-                format : new ol.format.MVT(),
-                url : vectorTileUrlPrefix + workspace +':vt_group3' + vectorTileUrlSuffix
-            })
-        });
+        // GroupUsage2 = new ol.layer.VectorTile({
+        //     type : 'wmts',
+        //     preload: 0,
+        //     renderMode: 'image',
+        //     minResolution : 152.746,
+        //     maxResolution : 610.984,
+        //     style : set_genericStyle,
+        //     crossOrigin: 'anonymous',
+        //     source : new ol.source.VectorTile({
+        //         tileGrid:ol.tilegrid.createXYZ(),
+        //         format : new ol.format.MVT(),
+        //         url : vectorTileUrlPrefix + workspace +':vt_group2' + vectorTileUrlSuffix
+        //     })
+        // });
 
-        GroupUsage4 = new ol.layer.VectorTile({
-            type : 'wmts',
-            preload: 0,
-            renderMode: 'image',
-            style : set_genericStyle,
-            minResolution : 4.773,
-            maxResolution : 19.093,
-            crossOrigin : 'anonymous',
-            source : new ol.source.VectorTile({
-               tileGrid:ol.tilegrid.createXYZ(),
-                format : new ol.format.MVT(),
-                url : vectorTileUrlPrefix + workspace +':vt_group4' + vectorTileUrlSuffix
-            })
-        });
+        // GroupUsage3 = new ol.layer.VectorTile({
+        //     type : 'wmts',
+        //     preload: 0,
+        //     renderMode: 'image',
+        //     minResolution : 19.093,
+        //     maxResolution : 152.746,
+        //     style : set_genericStyle,
+        //     crossOrigin : 'anonymous',
+        //     source : new ol.source.VectorTile({
+        //        tileGrid:ol.tilegrid.createXYZ(),
+        //         format : new ol.format.MVT(),
+        //         url : vectorTileUrlPrefix + workspace +':vt_group3' + vectorTileUrlSuffix
+        //     })
+        // });
 
-        GroupUsage5 = new ol.layer.VectorTile({
-            type : 'wmts',
-            preload: 0,
-            renderMode: 'image',
-            minResolution : 0.298,
-            maxResolution : 4.773,
-            style : set_genericStyle,
-            crossOrigin : 'anonymous',
-            source : new ol.source.VectorTile({
-            tileGrid:ol.tilegrid.createXYZ(),
-                format : new ol.format.MVT(),
-                url : vectorTileUrlPrefix + workspace +':vt_group5' + vectorTileUrlSuffix
-            })
-        });
+        // GroupUsage4 = new ol.layer.VectorTile({
+        //     type : 'wmts',
+        //     preload: 0,
+        //     renderMode: 'image',
+        //     style : set_genericStyle,
+        //     minResolution : 4.773,
+        //     maxResolution : 19.093,
+        //     crossOrigin : 'anonymous',
+        //     source : new ol.source.VectorTile({
+        //        tileGrid:ol.tilegrid.createXYZ(),
+        //         format : new ol.format.MVT(),
+        //         url : vectorTileUrlPrefix + workspace +':vt_group4' + vectorTileUrlSuffix
+        //     })
+        // });
 
-        GroupUsage6 = new ol.layer.VectorTile({
-            type : 'wmts',
-            preload: 0,
-            renderMode: 'image',
-            minResolution : 0.298,
-            maxResolution : 4.773,
-            style : set_genericStyle,
-            crossOrigin : 'anonymous',
-            source : new ol.source.VectorTile({
-              tileGrid:ol.tilegrid.createXYZ(),
-                format : new ol.format.MVT(),
-                url : vectorTileUrlPrefix + workspace +':vt_group6' + vectorTileUrlSuffix
-            })
-        });
+        // GroupUsage5 = new ol.layer.VectorTile({
+        //     type : 'wmts',
+        //     preload: 0,
+        //     renderMode: 'image',
+        //     minResolution : 0.298,
+        //     maxResolution : 4.773,
+        //     style : set_genericStyle,
+        //     crossOrigin : 'anonymous',
+        //     source : new ol.source.VectorTile({
+        //     tileGrid:ol.tilegrid.createXYZ(),
+        //         format : new ol.format.MVT(),
+        //         url : vectorTileUrlPrefix + workspace +':vt_group5' + vectorTileUrlSuffix
+        //     })
+        // });
 
-        layerEncBase = new ol.layer.Group({
-            title: 'ENC Base',
-            type : 'wmtsgroup',
-            visible : true,
-            layers: [GroupUsage1, GroupUsage2, GroupUsage3, GroupUsage4, GroupUsage5, GroupUsage6]
-        });
+        // GroupUsage6 = new ol.layer.VectorTile({
+        //     type : 'wmts',
+        //     preload: 0,
+        //     renderMode: 'image',
+        //     minResolution : 0.298,
+        //     maxResolution : 4.773,
+        //     style : set_genericStyle,
+        //     crossOrigin : 'anonymous',
+        //     source : new ol.source.VectorTile({
+        //       tileGrid:ol.tilegrid.createXYZ(),
+        //         format : new ol.format.MVT(),
+        //         url : vectorTileUrlPrefix + workspace +':vt_group6' + vectorTileUrlSuffix
+        //     })
+        // });
 
-        NavAids4 = new ol.layer.VectorTile({
-            type : 'wmts',
-            preload : 0,
-            renderMode: 'image',
-            style: set_genericStyle,
-            minResolution: 4.773,
-            maxResolution: 19.093,
-            crossOrigin: 'anonymous',
-            source: new ol.source.VectorTile({
-                tileGrid:ol.tilegrid.createXYZ(),
-                format : new ol.format.MVT(),
-                url: vectorTileUrlPrefix + 'NCWorkspace:vt_navaids_u4' + vectorTileUrlSuffix
-            })
-          });
+        // layerEncBase = new ol.layer.Group({
+        //     title: 'ENC Base',
+        //     type : 'wmtsgroup',
+        //     visible : true,
+        //     layers: [GroupUsage1, GroupUsage2, GroupUsage3, GroupUsage4, GroupUsage5, GroupUsage6]
+        // });
 
-        NavAids5 = new ol.layer.VectorTile({
-            type : 'wmts',
-            preload : 0,
-            renderMode: 'image',
-            style: set_genericStyle,
-            minResolution: 0.298,
-            maxResolution: 4.773,
-            crossOrigin: 'anonymous',
-            source: new ol.source.VectorTile({
-                tileGrid:ol.tilegrid.createXYZ(),
-                format : new ol.format.MVT(),
-                url: vectorTileUrlPrefix + 'NCWorkspace:vt_navaids_u5' + vectorTileUrlSuffix
-            })
-          });
+        // NavAids4 = new ol.layer.VectorTile({
+        //     type : 'wmts',
+        //     preload : 0,
+        //     renderMode: 'image',
+        //     style: set_genericStyle,
+        //     minResolution: 4.773,
+        //     maxResolution: 19.093,
+        //     crossOrigin: 'anonymous',
+        //     source: new ol.source.VectorTile({
+        //         tileGrid:ol.tilegrid.createXYZ(),
+        //         format : new ol.format.MVT(),
+        //         url: vectorTileUrlPrefix + 'NCWorkspace:vt_navaids_u4' + vectorTileUrlSuffix
+        //     })
+        //   });
 
-        NavAids6 = new ol.layer.VectorTile({
-            type : 'wmts',
-            preload : 0,
-            renderMode: 'image',
-            style: set_genericStyle,
-            minResolution: 0.298,
-            maxResolution: 4.773,
-            crossOrigin: 'anonymous',
-            source: new ol.source.VectorTile({
-                tileGrid:ol.tilegrid.createXYZ(),
-                format : new ol.format.MVT(),
-                url: vectorTileUrlPrefix + 'NCWorkspace:vt_navaids_u6' + vectorTileUrlSuffix
-            })
-        });
+        // NavAids5 = new ol.layer.VectorTile({
+        //     type : 'wmts',
+        //     preload : 0,
+        //     renderMode: 'image',
+        //     style: set_genericStyle,
+        //     minResolution: 0.298,
+        //     maxResolution: 4.773,
+        //     crossOrigin: 'anonymous',
+        //     source: new ol.source.VectorTile({
+        //         tileGrid:ol.tilegrid.createXYZ(),
+        //         format : new ol.format.MVT(),
+        //         url: vectorTileUrlPrefix + 'NCWorkspace:vt_navaids_u5' + vectorTileUrlSuffix
+        //     })
+        //   });
 
-        NavAids = new ol.layer.Group({
-            title: 'Navigational Aids',
-            type : 'wmtsgroup',
-            visible : true,
-            layers: [NavAids4, NavAids5, NavAids6]
-        });
+        // NavAids6 = new ol.layer.VectorTile({
+        //     type : 'wmts',
+        //     preload : 0,
+        //     renderMode: 'image',
+        //     style: set_genericStyle,
+        //     minResolution: 0.298,
+        //     maxResolution: 4.773,
+        //     crossOrigin: 'anonymous',
+        //     source: new ol.source.VectorTile({
+        //         tileGrid:ol.tilegrid.createXYZ(),
+        //         format : new ol.format.MVT(),
+        //         url: vectorTileUrlPrefix + 'NCWorkspace:vt_navaids_u6' + vectorTileUrlSuffix
+        //     })
+        // });
 
-        NavHazards4 = new ol.layer.VectorTile({
-            type : 'wmts',
-            visible : true,
-            preload : 0,
-            style: set_genericStyle,
-            minResolution: 4.773,
-            maxResolution: 19.093,
-            renderMode: 'image',
-            crossOrigin: 'anonymous',
-            source: new ol.source.VectorTile({
-                tileGrid:ol.tilegrid.createXYZ(),
-                format : new ol.format.MVT(),
-                url: vectorTileUrlPrefix + 'NCWorkspace:vt_navhazards_u4' + vectorTileUrlSuffix
-            })
-          });
+        // NavAids = new ol.layer.Group({
+        //     title: 'Navigational Aids',
+        //     type : 'wmtsgroup',
+        //     visible : true,
+        //     layers: [NavAids4, NavAids5, NavAids6]
+        // });
 
-        NavHazards5 = new ol.layer.VectorTile({
-            type : 'wmts',
-            preload : 0,
-            visible : true,
-            style: set_genericStyle,
-            minResolution: 0.298,
-            maxResolution: 4.773,
-            renderMode: 'image',
-            crossOrigin: 'anonymous',
-            source: new ol.source.VectorTile({
-                tileGrid:ol.tilegrid.createXYZ(),
-                format : new ol.format.MVT(),
-                url: vectorTileUrlPrefix + 'NCWorkspace:vt_navhazards_u5' + vectorTileUrlSuffix
-            })
-          });
+        // NavHazards4 = new ol.layer.VectorTile({
+        //     type : 'wmts',
+        //     visible : true,
+        //     preload : 0,
+        //     style: set_genericStyle,
+        //     minResolution: 4.773,
+        //     maxResolution: 19.093,
+        //     renderMode: 'image',
+        //     crossOrigin: 'anonymous',
+        //     source: new ol.source.VectorTile({
+        //         tileGrid:ol.tilegrid.createXYZ(),
+        //         format : new ol.format.MVT(),
+        //         url: vectorTileUrlPrefix + 'NCWorkspace:vt_navhazards_u4' + vectorTileUrlSuffix
+        //     })
+        //   });
 
-        NavHazards6 = new ol.layer.VectorTile({
-            type : 'wmts',
-            preload : 0,
-            visible : true,
-            style: set_genericStyle,
-            minResolution: 0.298,
-            maxResolution: 4.773,
-            renderMode: 'image',
-            crossOrigin: 'anonymous',
-            source: new ol.source.VectorTile({
-                tileGrid:ol.tilegrid.createXYZ(),
-                format : new ol.format.MVT(),
-                url: vectorTileUrlPrefix + 'NCWorkspace:vt_navhazards_u6' + vectorTileUrlSuffix
-            })
-        });
+        // NavHazards5 = new ol.layer.VectorTile({
+        //     type : 'wmts',
+        //     preload : 0,
+        //     visible : true,
+        //     style: set_genericStyle,
+        //     minResolution: 0.298,
+        //     maxResolution: 4.773,
+        //     renderMode: 'image',
+        //     crossOrigin: 'anonymous',
+        //     source: new ol.source.VectorTile({
+        //         tileGrid:ol.tilegrid.createXYZ(),
+        //         format : new ol.format.MVT(),
+        //         url: vectorTileUrlPrefix + 'NCWorkspace:vt_navhazards_u5' + vectorTileUrlSuffix
+        //     })
+        //   });
 
-        NavHazards = new ol.layer.Group({
-            title: 'Navigational Hazards',
-            type : 'wmtsgroup',
-            visible : true,
-            layers: [NavHazards4, NavHazards5, NavHazards6]
-        });
+        // NavHazards6 = new ol.layer.VectorTile({
+        //     type : 'wmts',
+        //     preload : 0,
+        //     visible : true,
+        //     style: set_genericStyle,
+        //     minResolution: 0.298,
+        //     maxResolution: 4.773,
+        //     renderMode: 'image',
+        //     crossOrigin: 'anonymous',
+        //     source: new ol.source.VectorTile({
+        //         tileGrid:ol.tilegrid.createXYZ(),
+        //         format : new ol.format.MVT(),
+        //         url: vectorTileUrlPrefix + 'NCWorkspace:vt_navhazards_u6' + vectorTileUrlSuffix
+        //     })
+        // });
 
-        Soundings4 = new ol.layer.VectorTile({
-            type : 'wmts',
-            preload : 0,
-            renderMode: 'image',
-            style: set_genericStyle,
-            crossOrigin: 'anonymous',
-            minResolution: 4.773,
-            maxResolution: 9.547,
-            source: new ol.source.VectorTile({
-                tileGrid:ol.tilegrid.createXYZ(),
-                format : new ol.format.MVT(),
-                url: vectorTileUrlPrefix + 'NCWorkspace:vt_sounding_u4' + vectorTileUrlSuffix
-            })
-          });
+        // NavHazards = new ol.layer.Group({
+        //     title: 'Navigational Hazards',
+        //     type : 'wmtsgroup',
+        //     visible : true,
+        //     layers: [NavHazards4, NavHazards5, NavHazards6]
+        // });
 
-        Soundings5 = new ol.layer.VectorTile({
-                type : 'wmts',
-                preload : 0,
-                renderMode: 'image',
-                style: set_genericStyle,
-                crossOrigin: 'anonymous',
-                minResolution: 0.298,
-                maxResolution: 4.773,
-                source: new ol.source.VectorTile({
-                    tileGrid:ol.tilegrid.createXYZ(),
-                    format : new ol.format.MVT(),
-                    url: vectorTileUrlPrefix + 'NCWorkspace:vt_sounding_u5' + vectorTileUrlSuffix
-                })
-              });
+        // Soundings4 = new ol.layer.VectorTile({
+        //     type : 'wmts',
+        //     preload : 0,
+        //     renderMode: 'image',
+        //     style: set_genericStyle,
+        //     crossOrigin: 'anonymous',
+        //     minResolution: 4.773,
+        //     maxResolution: 9.547,
+        //     source: new ol.source.VectorTile({
+        //         tileGrid:ol.tilegrid.createXYZ(),
+        //         format : new ol.format.MVT(),
+        //         url: vectorTileUrlPrefix + 'NCWorkspace:vt_sounding_u4' + vectorTileUrlSuffix
+        //     })
+        //   });
 
-        Soundings6 = new ol.layer.VectorTile({
-                type : 'wmts',
-                preload : 0,
-                renderMode: 'image',
-                style: set_genericStyle,
-                crossOrigin: 'anonymous',
-                minResolution: 0.298,
-                maxResolution: 4.773,
-                source: new ol.source.VectorTile({
-                    tileGrid:ol.tilegrid.createXYZ(),
-                    format : new ol.format.MVT(),
-                    url: vectorTileUrlPrefix + 'NCWorkspace:vt_sounding_u6' + vectorTileUrlSuffix
-                })
-        });
-            sounding321 = new ol.layer.VectorTile({
-            type : 'wmts',
-            preload : 0,
-            declutter: true,
-            renderMode: 'image',
-            style: set_genericStyle,
-            crossOrigin: 'anonymous',
-            minResolution: 9.547,
-            maxResolution: 2444,
-            source: new ol.source.VectorTile({
-                format : new ol.format.MVT(),
-                url: vectorTileUrlPrefix + 'NCWorkspace:vt_sounding' + vectorTileUrlSuffix
-            })
-          });
+        // Soundings5 = new ol.layer.VectorTile({
+        //         type : 'wmts',
+        //         preload : 0,
+        //         renderMode: 'image',
+        //         style: set_genericStyle,
+        //         crossOrigin: 'anonymous',
+        //         minResolution: 0.298,
+        //         maxResolution: 4.773,
+        //         source: new ol.source.VectorTile({
+        //             tileGrid:ol.tilegrid.createXYZ(),
+        //             format : new ol.format.MVT(),
+        //             url: vectorTileUrlPrefix + 'NCWorkspace:vt_sounding_u5' + vectorTileUrlSuffix
+        //         })
+        //       });
 
-        Soundings = new ol.layer.Group({
-            title: 'Soundings',
-            type : 'wmtsgroup',
-            visible : true,
-            layers: [sounding321,Soundings4, Soundings5, Soundings6]
-        });
+        // Soundings6 = new ol.layer.VectorTile({
+        //         type : 'wmts',
+        //         preload : 0,
+        //         renderMode: 'image',
+        //         style: set_genericStyle,
+        //         crossOrigin: 'anonymous',
+        //         minResolution: 0.298,
+        //         maxResolution: 4.773,
+        //         source: new ol.source.VectorTile({
+        //             tileGrid:ol.tilegrid.createXYZ(),
+        //             format : new ol.format.MVT(),
+        //             url: vectorTileUrlPrefix + 'NCWorkspace:vt_sounding_u6' + vectorTileUrlSuffix
+        //         })
+        // });
+        //     sounding321 = new ol.layer.VectorTile({
+        //     type : 'wmts',
+        //     preload : 0,
+        //     declutter: true,
+        //     renderMode: 'image',
+        //     style: set_genericStyle,
+        //     crossOrigin: 'anonymous',
+        //     minResolution: 9.547,
+        //     maxResolution: 2444,
+        //     source: new ol.source.VectorTile({
+        //         format : new ol.format.MVT(),
+        //         url: vectorTileUrlPrefix + 'NCWorkspace:vt_sounding' + vectorTileUrlSuffix
+        //     })
+        //   });
 
-        OSM = new ol.layer.Tile({
-          title:'OpenStreetMap',
-          visible:true,
-          source: new ol.source.OSM()
-        });
+        // Soundings = new ol.layer.Group({
+        //     title: 'Soundings',
+        //     type : 'wmtsgroup',
+        //     visible : true,
+        //     layers: [sounding321,Soundings4, Soundings5, Soundings6]
+        // });
 
-        Tide_StationsLayer = new ol.layer.Tile({
-            title: 'Tide Stations',
-            type: 'wms',
-            visible: false,
-            source: new ol.source.TileWMS({
-                url: wmsurl,
-                params: {
-                    'LAYERS': workspace + ':Tide_Stations'
-                },
-                serverType: 'geoserver'
-            })
-        });
+        // OSM = new ol.layer.Tile({
+        //   title:'OpenStreetMap',
+        //   visible:true,
+        //   source: new ol.source.OSM()
+        // });
+
+        // Tide_StationsLayer = new ol.layer.Tile({
+        //     title: 'Tide Stations',
+        //     type: 'wms',
+        //     visible: false,
+        //     source: new ol.source.TileWMS({
+        //         url: wmsurl,
+        //         params: {
+        //             'LAYERS': workspace + ':Tide_Stations'
+        //         },
+        //         serverType: 'geoserver'
+        //     })
+        // });
 
        
-        // radarimgs = new ol.layer.Image({
+        // // radarimgs = new ol.layer.Image({
+        // //     title: 'Radar Overlay',
+        // //     type: 'datalayer',
+        // //     visible: false,
+        // //     source: new ol.source.ImageStatic({
+        // //        url: 'https://mapservices.weather.noaa.gov/eventdriven/services/radar/radar_base_reflectivity/MapServer/WMSServer?request=GetCapabilities&service=WMS',
+        // //        projection: prj1,
+        // //         imageExtent: [ul[0], lr[1], lr[0], ul[1]]
+        // //     })
+        // // });
+       
+        
+        // radarimgs=new ol.layer.Tile({
         //     title: 'Radar Overlay',
         //     type: 'datalayer',
         //     visible: false,
-        //     source: new ol.source.ImageStatic({
-        //        url: 'https://mapservices.weather.noaa.gov/eventdriven/services/radar/radar_base_reflectivity/MapServer/WMSServer?request=GetCapabilities&service=WMS',
-        //        projection: prj1,
-        //         imageExtent: [ul[0], lr[1], lr[0], ul[1]]
+        //     source: new ol.source.TileWMS({
+        //         url: 'https://mapservices.weather.noaa.gov/eventdriven/services/radar/radar_base_reflectivity/MapServer/WMSServer',
+        //         params: {
+        //             'LAYERS': '1',
+        //             'FORMAT': 'image/png',
+        //             'VERSION': '1.3.0',
+        //             'CRS': 'EPSG:4326', // Use 'CRS' instead of 'SRS' for version 1.3.0
+        //             'STYLES': ''
+        //         },
+        //     })
+        // })
+        
+       
+        // SatilliteLayer = new ol.layer.Tile({
+        //     title: 'Satillite Imagery',
+        //     type: 'datalayer',
+        //     visible: false,
+        //     source : new ol.source.BingMaps({
+        //         key : 'AtRJu52pIf1CINdLfRGGJz27bXzXkGc8STzexLhnwtQecuzCnF-C_4RQI5KNKA88',
+        //         crossOrigin : 'anonymous',
+        //         imagerySet : 'Aerial',
+        //         params : {
+        //             'LAYERS' : "BingMaps"
+        //         }
         //     })
         // });
-       
-        
-        radarimgs=new ol.layer.Tile({
-            title: 'Radar Overlay',
-            type: 'datalayer',
-            visible: false,
-            source: new ol.source.TileWMS({
-                url: 'https://mapservices.weather.noaa.gov/eventdriven/services/radar/radar_base_reflectivity/MapServer/WMSServer',
-                params: {
-                    'LAYERS': '1',
-                    'FORMAT': 'image/png',
-                    'VERSION': '1.3.0',
-                    'CRS': 'EPSG:4326', // Use 'CRS' instead of 'SRS' for version 1.3.0
-                    'STYLES': ''
-                },
-            })
+
+        // Others4 = new ol.layer.VectorTile({
+        //     type : 'wmts',
+        //     preload : 0,
+        //     visible : true,
+        //     style: set_genericStyle,
+        //     minResolution: 4.773,
+        //     maxResolution: 19.093,
+        //     renderMode: 'image',
+        //     crossOrigin: 'anonymous',
+        //     source: new ol.source.VectorTile({
+        //         tileGrid: ol.tilegrid.createXYZ(),
+        //         format: new ol.format.MVT(),
+        //         url: vectorTileUrlPrefix + 'NCWorkspace:vt_other_u4' + vectorTileUrlSuffix
+        //     })
+        // });
+
+        // Others5 = new ol.layer.VectorTile({
+        //     type : 'wmts',
+        //     preload : 0,
+        //     visible : true,
+        //     style: set_genericStyle,
+        //     minResolution: 0.298,
+        //     maxResolution: 4.773,
+        //     renderMode: 'image',
+        //     crossOrigin: 'anonymous',
+        //     source: new ol.source.VectorTile({
+        //         tileGrid: ol.tilegrid.createXYZ(),
+        //         format: new ol.format.MVT(),
+        //         url: vectorTileUrlPrefix + 'NCWorkspace:vt_other_u5' + vectorTileUrlSuffix
+        //     })
+        // });
+
+        // Others6 = new ol.layer.VectorTile({
+        //     type : 'wmts',
+        //     preload : 0,
+        //     visible : true,
+        //     style: set_genericStyle,
+        //     minResolution: 0.298,
+        //     maxResolution: 4.773,
+        //     renderMode: 'image',
+        //     crossOrigin: 'anonymous',
+        //     source: new ol.source.VectorTile({
+        //         tileGrid: ol.tilegrid.createXYZ(),
+        //         format: new ol.format.MVT(),
+        //         url: vectorTileUrlPrefix + 'NCWorkspace:vt_other_u6' + vectorTileUrlSuffix
+        //     })
+        // });
+
+        // var Other_u4_centroid = new ol.layer.VectorTile({
+        //     type : 'wmts1',
+        //     preload : 0,
+        //     visible : true,
+        //     style: centroidStyle,
+        //     minResolution: 4.773,
+        //     maxResolution: 19.093,
+        //     renderMode: 'image',
+        //     crossOrigin: 'anonymous',
+        //     source: new ol.source.VectorTile({
+        //         tileGrid: ol.tilegrid.createXYZ(),
+        //         format: new ol.format.MVT(),
+        //         url: vectorTileUrlPrefix + 'NCWorkspace:vt_other_u4_c' + vectorTileUrlSuffix
+        //     })
+        //   });
+
+        // Other_u5_centroid = new ol.layer.VectorTile({
+        //     type : 'wmts1',
+        //     preload : 0,
+        //     visible : true,
+        //     style: centroidStyle,
+        //     minResolution: 0.298,
+        //     maxResolution: 4.773,
+        //     renderMode: 'image',
+        //     crossOrigin: 'anonymous',
+        //     source: new ol.source.VectorTile({
+        //         tileGrid: ol.tilegrid.createXYZ(),
+        //         format: new ol.format.MVT(),
+        //         url: vectorTileUrlPrefix + 'NCWorkspace:vt_other_u5_c' + vectorTileUrlSuffix
+        //     })
+        //   });
+
+        // Other_u6_centroid = new ol.layer.VectorTile({
+        //     type : 'wmts1',
+        //     preload : 0,
+        //     visible : true,
+        //     style: centroidStyle,
+        //     minResolution: 0.298,
+        //     maxResolution: 4.773,
+        //     renderMode: 'image',
+        //     crossOrigin: 'anonymous',
+        //     source: new ol.source.VectorTile({
+        //         tileGrid: ol.tilegrid.createXYZ(),
+        //         format: new ol.format.MVT(),
+        //         url: vectorTileUrlPrefix + 'NCWorkspace:vt_other_u6_c' + vectorTileUrlSuffix
+        //     })
+        //   });
+
+        // Others_centroid = new ol.layer.Group({
+        //     type : 'wmts1',
+        //     visible : true,
+        //     layers: [Other_u4_centroid, Other_u5_centroid, Other_u6_centroid]
+        // });
+
+        // Others = new ol.layer.Group({
+        //     title: 'ENC Base(others)',
+        //     type : 'wmts',
+        //     visible : true,
+        //     layers: [Others4, Others5, Others6, Others_centroid]
+        // });
+
+        // const map = new ol.Map({
+        //     target: 'map',
+        //     controls: ol.control.defaults({}).extend([scaleLineControl]),
+        //     interactions:ol.interaction.defaults({altShiftDragRotate:false, pinchRotate:false}),
+        //     layers: [
+        //     new ol.layer.Tile({
+        //         source: new ol.source.OSM()
+        //     }),
+        //     new ol.layer.Tile({
+        //         source: new ol.source.XYZ({
+        //         url: '/sdcard/Documents/tiles/{z}/{x}/{y}.png'
+        //         })
+        //     })
+        //     ],
+        //     view: new ol.View({
+        //     center: ol.proj.fromLonLat([-123.1216, 49.2827]),
+        //     zoom: 12
+        //     })
+        // });
+
+          let osm = new ol.layer.Tile({
+        title: 'OSM',
+        source: new ol.source.OSM()
+    });
+
+    const geoJsonSource = new ol.source.Vector({
+        url: "file:///storage/emulated/0/Android/data/com.iic.naavic/files/NAVLINE.geojson", // URL to the GeoJSON filesdcard/Android/data/com.google.android.videos/files/Download/s128.geojson', // URL to the GeoJSON file
+        format: new ol.format.GeoJSON()
+    });
+
+     const geoJsonSource2 = new ol.source.Vector({
+        url: "file:///storage/emulated/0/Android/data/com.iic.naavic/files/RECTRC.geojson", // URL to the GeoJSON filesdcard/Android/data/com.google.android.videos/files/Download/s128.geojson', // URL to the GeoJSON file
+        format: new ol.format.GeoJSON()
+    })
+
+    const geoJsonStyle = new ol.style.Style({
+            stroke: new ol.style.Stroke({
+            color: 'rgba(0, 153, 255, 1)', // Blue stroke
+            width: 2
         })
-        
-       
-        SatilliteLayer = new ol.layer.Tile({
-            title: 'Satillite Imagery',
-            type: 'datalayer',
-            visible: false,
-            source : new ol.source.BingMaps({
-                key : 'AtRJu52pIf1CINdLfRGGJz27bXzXkGc8STzexLhnwtQecuzCnF-C_4RQI5KNKA88',
-                crossOrigin : 'anonymous',
-                imagerySet : 'Aerial',
-                params : {
-                    'LAYERS' : "BingMaps"
-                }
-            })
-        });
+    });
 
-        Others4 = new ol.layer.VectorTile({
-            type : 'wmts',
-            preload : 0,
-            visible : true,
-            style: set_genericStyle,
-            minResolution: 4.773,
-            maxResolution: 19.093,
-            renderMode: 'image',
-            crossOrigin: 'anonymous',
-            source: new ol.source.VectorTile({
-                tileGrid: ol.tilegrid.createXYZ(),
-                format: new ol.format.MVT(),
-                url: vectorTileUrlPrefix + 'NCWorkspace:vt_other_u4' + vectorTileUrlSuffix
-            })
-        });
+    const geoJsonLayer = new ol.layer.Vector({
+        source: geoJsonSource,
+        style: geoJsonStyle,
+        title: 'CMC passage plan data3',
+        visible: true // Set to true to display this layer
+    });
 
-        Others5 = new ol.layer.VectorTile({
-            type : 'wmts',
-            preload : 0,
-            visible : true,
-            style: set_genericStyle,
-            minResolution: 0.298,
-            maxResolution: 4.773,
-            renderMode: 'image',
-            crossOrigin: 'anonymous',
-            source: new ol.source.VectorTile({
-                tileGrid: ol.tilegrid.createXYZ(),
-                format: new ol.format.MVT(),
-                url: vectorTileUrlPrefix + 'NCWorkspace:vt_other_u5' + vectorTileUrlSuffix
-            })
-        });
+     const geoJsonLayer2 = new ol.layer.Vector({
 
-        Others6 = new ol.layer.VectorTile({
-            type : 'wmts',
-            preload : 0,
-            visible : true,
-            style: set_genericStyle,
-            minResolution: 0.298,
-            maxResolution: 4.773,
-            renderMode: 'image',
-            crossOrigin: 'anonymous',
-            source: new ol.source.VectorTile({
-                tileGrid: ol.tilegrid.createXYZ(),
-                format: new ol.format.MVT(),
-                url: vectorTileUrlPrefix + 'NCWorkspace:vt_other_u6' + vectorTileUrlSuffix
-            })
-        });
+        source: geoJsonSource2,
+        style: geoJsonStyle,
+        title: 'CMC passage plan data1',
+        visible: true // Set to true to display this layer
 
-        var Other_u4_centroid = new ol.layer.VectorTile({
-            type : 'wmts1',
-            preload : 0,
-            visible : true,
-            style: centroidStyle,
-            minResolution: 4.773,
-            maxResolution: 19.093,
-            renderMode: 'image',
-            crossOrigin: 'anonymous',
-            source: new ol.source.VectorTile({
-                tileGrid: ol.tilegrid.createXYZ(),
-                format: new ol.format.MVT(),
-                url: vectorTileUrlPrefix + 'NCWorkspace:vt_other_u4_c' + vectorTileUrlSuffix
-            })
-          });
+    });
 
-        Other_u5_centroid = new ol.layer.VectorTile({
-            type : 'wmts1',
-            preload : 0,
-            visible : true,
-            style: centroidStyle,
-            minResolution: 0.298,
-            maxResolution: 4.773,
-            renderMode: 'image',
-            crossOrigin: 'anonymous',
-            source: new ol.source.VectorTile({
-                tileGrid: ol.tilegrid.createXYZ(),
-                format: new ol.format.MVT(),
-                url: vectorTileUrlPrefix + 'NCWorkspace:vt_other_u5_c' + vectorTileUrlSuffix
-            })
-          });
+    const localTileUrl = 'file:////storage/emulated/0/Android/data/com.iic.naavic/files/tiles/{z}/{x}/{y}.png';
 
-        Other_u6_centroid = new ol.layer.VectorTile({
-            type : 'wmts1',
-            preload : 0,
-            visible : true,
-            style: centroidStyle,
-            minResolution: 0.298,
-            maxResolution: 4.773,
-            renderMode: 'image',
-            crossOrigin: 'anonymous',
-            source: new ol.source.VectorTile({
-                tileGrid: ol.tilegrid.createXYZ(),
-                format: new ol.format.MVT(),
-                url: vectorTileUrlPrefix + 'NCWorkspace:vt_other_u6_c' + vectorTileUrlSuffix
-            })
-          });
+    const localTileSource = new ol.source.XYZ({
+        url: localTileUrl,
+    });
 
-        Others_centroid = new ol.layer.Group({
-            type : 'wmts1',
-            visible : true,
-            layers: [Other_u4_centroid, Other_u5_centroid, Other_u6_centroid]
-        });
-
-        Others = new ol.layer.Group({
-            title: 'ENC Base(others)',
-            type : 'wmts',
-            visible : true,
-            layers: [Others4, Others5, Others6, Others_centroid]
-        });
+    const localTileLayer = new ol.layer.Tile({
+        title: 'CMC passage plan data2',
+        source: localTileSource,
+    });
 
         map = new ol.Map({
             controls: ol.control.defaults({}).extend([scaleLineControl]),
             interactions:ol.interaction.defaults({altShiftDragRotate:false, pinchRotate:false}),
             target: 'map',
             view: startView,
-            layers:  [OSM , layerEncBase, Others, NavHazards, NavAids, Soundings]
-        });
+            layers: [osm, localTileLayer, geoJsonLayer , geoJsonLayer2]
+            
+                });
 
    $('#displaymodegroup input[type=radio]').change(function(){
         displayModeObject = modeChanged();
@@ -721,8 +793,8 @@ function touchend() {
     //stops short touches from firing the event
     if (timer){
         clearTimeout(timer); // clearTimeout, not cleartimeout..
-		lockTimer = false;
-	}
+        lockTimer = false;
+    }
 }
 function deletemarker () {
 
@@ -973,6 +1045,24 @@ var offline_NavHazards;
 
 function addOfflineLayers(){
     if(localStorage.getItem('showofflinemap') === 'showofflinemap'){
+
+        // Example for loading raster tiles (PNG/JPG) from a local directory
+        var URL_rasterTiles = 'file:///storage/emulated/0/Android/data/com.iic.naavic/files/' + localStorage.getItem('username') + '/raster_tiles/{z}/{x}/{y}.png';
+
+        offlineRasterTiles = new ol.layer.Tile({
+            visible: true,
+            preload: 0,
+            minResolution: 610.984,
+            maxResolution: 2444,
+            source: new ol.source.XYZ({
+                tileGrid: ol.tilegrid.createXYZ(),
+                url: URL_rasterTiles,
+                crossOrigin: 'anonymous'
+            })
+        });
+
+        // Add the raster tile layer to the map
+        map.addLayer(offlineRasterTiles);
 
         var URL_1 = 'file:///storage/emulated/0/Android/data/com.iic.naavic/files/'+localStorage.getItem('username')+'/vt_group1/{z}/{x}/{y}.pbf';
         

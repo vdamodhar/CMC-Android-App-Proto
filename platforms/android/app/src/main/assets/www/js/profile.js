@@ -249,7 +249,7 @@ function getIndexofElement(key) {
 }
 
 function inviteFriend(){
-window.plugins.socialsharing.share('Download The NaAVIC from play store with below Link https://play.google.com/store/apps/details?id=com.iict.naavic', 'NaAVIC');
+window.plugins.socialsharing.share('Download The NaAVIC from play store with below Link https://play.google.com/store/apps/details?id=com.iic.naavic', 'NaAVIC');
 }
 function DeleteMyAccount(){
     $('#id01').modal('show');

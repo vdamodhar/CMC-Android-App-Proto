@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="47" id="com.iict.naavic" version="3.0.14" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget android-versionCode="39" id="com.iic.naavic" version="3.0.6" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <feature name="File">
         <param name="android-package" value="org.apache.cordova.file.FileUtils" />
         <param name="onload" value="true" />
     </feature>
     <allow-navigation href="cdvfile:*" />
-    <allow-navigation href="file:*" />
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
@@ -76,5 +75,4 @@
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="SplashScreenDelay" value="1000" />
     <preference name="LoadUrlTimeoutValue" value="50000" />
-
 </widget>

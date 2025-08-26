@@ -7,9 +7,6 @@
 var geoserverurl = 'https://dev.naavic.net/geoserver/';
 var webserviceurl = 'https://dev.naavic.net/nc-services/rest/';
 
-//var geoserverurl = 'http://172.16.33.216:8080/geoserver/';
-//var webserviceurl = 'http://172.16.33.216:8080/nc-services/rest/';
-
 // var geoserverurl = 'https://dev.naavic.net/geoserver/';
 // var webserviceurl ='http://ec2-user@ec2-13-54-97-109.ap-southeast-2.compute.amazonaws.com:8005/nc-services/rest/'
 

@@ -532,28 +532,28 @@ $(document).ready(function() {
         // });
 
           let osm = new ol.layer.Tile({
-		title: 'OSM',
-		source: new ol.source.OSM()
-	});
+        title: 'OSM',
+        source: new ol.source.OSM()
+    });
 
     const geoJsonSource = new ol.source.Vector({
-		url: "file:///storage/emulated/0/Android/data/com.iic.naavic/files/NAVLINE.geojson", // URL to the GeoJSON filesdcard/Android/data/com.google.android.videos/files/Download/s128.geojson', // URL to the GeoJSON file
-		format: new ol.format.GeoJSON()
-	});
+        url: "file:///storage/emulated/0/Android/data/com.iic.naavic/files/NAVLINE.geojson", // URL to the GeoJSON filesdcard/Android/data/com.google.android.videos/files/Download/s128.geojson', // URL to the GeoJSON file
+        format: new ol.format.GeoJSON()
+    });
 
      const geoJsonSource2 = new ol.source.Vector({
         url: "file:///storage/emulated/0/Android/data/com.iic.naavic/files/RECTRC.geojson", // URL to the GeoJSON filesdcard/Android/data/com.google.android.videos/files/Download/s128.geojson', // URL to the GeoJSON file
         format: new ol.format.GeoJSON()
     })
 
-	const geoJsonStyle = new ol.style.Style({
-			stroke: new ol.style.Stroke({
-			color: 'rgba(0, 153, 255, 1)', // Blue stroke
-			width: 2
-	    })
-	});
+    const geoJsonStyle = new ol.style.Style({
+            stroke: new ol.style.Stroke({
+            color: 'rgba(0, 153, 255, 1)', // Blue stroke
+            width: 2
+        })
+    });
 
-	const geoJsonLayer = new ol.layer.Vector({
+    const geoJsonLayer = new ol.layer.Vector({
         source: geoJsonSource,
         style: geoJsonStyle,
         title: 'CMC passage plan data3',
@@ -793,8 +793,8 @@ function touchend() {
     //stops short touches from firing the event
     if (timer){
         clearTimeout(timer); // clearTimeout, not cleartimeout..
-		lockTimer = false;
-	}
+        lockTimer = false;
+    }
 }
 function deletemarker () {
 

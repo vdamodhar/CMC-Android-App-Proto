@@ -128,7 +128,7 @@
 }
  #gps{
      position: absolute;
-     top: 54px;
+     top: 60px;
      left: 8px;
      background-image: url(../images/gps-off.png);
      background-repeat: no-repeat;

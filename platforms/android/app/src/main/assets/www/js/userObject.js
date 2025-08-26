@@ -574,7 +574,7 @@ function clearAttachments(){
 
 function getFilesOfFeature(){
 
-   var settings = {
+    var settings = {
         "async": true,
         "crossDomain": true,
         "url": webserviceurl + "features/" + featureId + '/files',
@@ -609,34 +609,17 @@ function getFilesOfFeature(){
         $(responseXML).find('item').each(function() {
             urls.push($(this).text()); // Extract URL and push to the array
         });
-
+        
         // Process the extracted URLs
-        /*for (var i = 0; i < urls.length; i++) {
+        for (var i = 0; i < urls.length; i++) {
             if (urls[i].includes('.jpg') || urls[i].includes('.png') || urls[i].includes('.jpeg')) {
                 $("#postedimage").attr("src", urls[i]);
             } else if (urls[i].includes('.rtz') || urls[i].includes('.kml') || urls[i].includes('.geojson')) {
                 $("#postedroute").attr("routepath", urls[i]);
                 $("#postedroute").html(urls[i].substr(urls[i].lastIndexOf('/') + 1));
             }
-        }*/
-
-        // added loadermask and timout to render feature file
-         $(".loadermask").show();
-         setTimeout(function() {
-            for (var i = 0; i < urls.length; i++) {
-                if (urls[i].includes('.jpg') || urls[i].includes('.png') || urls[i].includes('.jpeg')) {
-                    $("#postedimage").attr("src", urls[i]);
-                } else if (urls[i].includes('.rtz') || urls[i].includes('.kml') || urls[i].includes('.geojson')) {
-                    $("#postedroute").attr("routepath", urls[i]);
-                    $("#postedroute").html(urls[i].substr(urls[i].lastIndexOf('/') + 1));
-                }
-            }
-         $(".loadermask").hide();
-          }, 7000);// 7000 ms delay
-
+        }
     });
-
-
 
 
    

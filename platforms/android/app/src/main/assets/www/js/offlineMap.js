@@ -323,7 +323,7 @@ downLoadTilesOne();
 //     const fileDirectory = cordova.file.externalDataDirectory; // Persistent storage on Android
 //     const fileName = `${username}.zip`;
 //     const fileURL = `${fileDirectory}${fileName}`;
-//     //var fileURL =  'cdvfile://localhost/persistent/Android/data/com.iict.naavic/NaAVIC/OfflineMap/'+localStorage.getItem("username")+".zip";
+//     //var fileURL =  'cdvfile://localhost/persistent/Android/data/com.iic.naavic/NaAVIC/OfflineMap/'+localStorage.getItem("username")+".zip";
 //     $("#downloadingprogress").html("Downloading");
 //     $("#downloadstatus").css("display",'block');
 //     $(".fa-spinner").css('display','block');
@@ -353,9 +353,9 @@ downLoadTilesOne();
 // }
 // function unzipFiles(){
 
-//     //var ZipPath = 'cdvfile://localhost/persistent/Android/data/com.iict.naavic/NaAVIC/OfflineMap/'+localStorage.getItem("username")+'.zip';
+//     //var ZipPath = 'cdvfile://localhost/persistent/Android/data/com.iic.naavic/NaAVIC/OfflineMap/'+localStorage.getItem("username")+'.zip';
 //     // Path of the destination folder
-//     //var ZipExtractDirectory = 'cdvfile://localhost/persistent/Android/data/com.iict.naavic/NaAVIC/OfflineMap/'+localStorage.getItem("username");
+//     //var ZipExtractDirectory = 'cdvfile://localhost/persistent/Android/data/com.iic.naavic/NaAVIC/OfflineMap/'+localStorage.getItem("username");
 //     var ZipPath = cordova.file.externalDataDirectory+localStorage.getItem("username")+'.zip';
 //     var ZipExtractDirectory=cordova.file.externalDataDirectory+localStorage.getItem("username")+'.zip'
 //     // Handle the result of the process
