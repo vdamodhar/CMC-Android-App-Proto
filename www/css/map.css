@@ -5,6 +5,8 @@
 }
  .map {
      background: #aad3df;
+     height: 100% !important;
+     width: 100% !important;
 }
  input[type=checkbox]{
      position:relative;
@@ -553,11 +555,11 @@
          display:none !important;
     }
      .page_content{
-         margin-right:340px !important;
+         /* margin-right:340px !important; */
          transition: all .4s ease 0s;
     }
      .rotationclass{
-         right:438px;
+         right:88px;
     }
      #listofformats , #savetheroute{
          width: 40%;

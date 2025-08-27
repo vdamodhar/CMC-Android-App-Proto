@@ -53,12 +53,11 @@ android {
         sourceCompatibility JavaLanguageVersion.of(cordovaConfig.JAVA_SOURCE_COMPATIBILITY)
         targetCompatibility JavaLanguageVersion.of(cordovaConfig.JAVA_TARGET_COMPATIBILITY)
     }
-    defaultConfig {
-        minSdk 26
-        targetSdk 35
-    }
 
     // For the Android Cordova Lib, we allow changing the minSdkVersion, but it is at the users own risk
+    defaultConfig {
+        minSdkVersion cordovaConfig.MIN_SDK_VERSION
+    }
 
     sourceSets {
         main {
