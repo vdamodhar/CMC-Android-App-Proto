@@ -192,12 +192,12 @@ android {
     defaultConfig {
         versionCode cdvVersionCode ?: new BigInteger("" + privateHelpers.extractIntFromManifest("versionCode"))
         applicationId cordovaConfig.PACKAGE_NAMESPACE
-        minSdk 26
-        targetSdk 35
 
+        minSdkVersion cordovaConfig.MIN_SDK_VERSION
         if (cordovaConfig.MAX_SDK_VERSION != null) {
             maxSdkVersion cordovaConfig.MAX_SDK_VERSION
         }
+        targetSdkVersion cordovaConfig.SDK_VERSION
         compileSdkVersion cordovaConfig.COMPILE_SDK_VERSION
     }
 
@@ -256,7 +256,7 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility cordovaConfig.JAVA_SOURCE_COMPATIBILITY
+        sourceCompatibility JavaLanguageVersion.of(cordovaConfig.JAVA_SOURCE_COMPATIBILITY)
         targetCompatibility JavaLanguageVersion.of(cordovaConfig.JAVA_TARGET_COMPATIBILITY)
     }
 

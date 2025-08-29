@@ -542,7 +542,7 @@ $(document).ready(function() {
     });
 
      const geoJsonSource2 = new ol.source.Vector({
-        url: "file:///storage/emulated/0/Android/data/com.iic.naavic/files/RECTRC.geojson", // URL to the GeoJSON filesdcard/Android/data/com.google.android.videos/files/Download/s128.geojson', // URL to the GeoJSON file
+        url: "www/resources/geojson/RECTRC.geojson", // URL to the GeoJSON filesdcard/Android/data/com.google.android.videos/files/Download/s128.geojson', // URL to the GeoJSON file
         format: new ol.format.GeoJSON()
     })
 
@@ -569,7 +569,7 @@ $(document).ready(function() {
 
     });
 
-    const localTileUrl = 'file:////storage/emulated/0/Android/data/com.iic.naavic/files/tiles/{z}/{x}/{y}.png';
+    const localTileUrl = 'www/resources/geojson/RECTRC.geojson';
 
     const localTileSource = new ol.source.XYZ({
         url: localTileUrl,

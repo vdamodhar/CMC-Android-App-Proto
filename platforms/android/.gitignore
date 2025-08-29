@@ -1,43 +1,21 @@
-#built application files
-*.apk
-*.ap_
-*.aab
-
-# files for the dex VM
-*.dex
-
-# Java class files
-*.class
-
-# generated files
-bin/
-gen/
-
-# Local configuration file (sdk path, etc)
+# Non-project-specific build files:
+build.xml
 local.properties
-
-# Windows thumbnail db
-Thumbs.db
-
-# OSX files
-.DS_Store
-
-# Android Studio
-*.iml
-.idea
-#.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
+/gradlew
+/gradlew.bat
+/gradle
+# Ant builds
+ant-build
+ant-gen
+# Eclipse builds
+gen
+out
+# Gradle build artifacts
 .gradle
-build/
-.navigation
-captures/
-output.json
-
-#NDK
-obj/
-.externalNativeBuild
-
-#Node Modules
-node_modules
-coverage
-platforms
-plugins
+.gradletasknamecache
+/build
+/CordovaLib/build
+/app/build
+gradle-app.setting
+# Android Studio
+.idea

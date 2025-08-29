@@ -13,6 +13,7 @@
 }
  #main {
      transition: all .4s ease 0s;
+     height: 100vh;
 }
  .swipe-rightsidepage{
     width: 10px;
@@ -159,8 +160,13 @@
          border-left: 1px solid #ccc;
     }
         .page_content{
-         margin-right:340px !important;
+         /* margin-right:340px !important; */
          transition: all .4s ease 0s;
+    }
+
+    #main{
+     transition: all .4s ease 0s;
+     height: 100vh;
     }
    
      #main_icon{
@@ -181,6 +187,7 @@
 @media only screen and (min-device-width : 768px) and (max-device-width : 1290px){
 	 #main {
      transition: all .4s ease 0s;
+        height: 100vh;
 }
     #main_icon {
          padding: 20px 22px;
